@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: candy-app
+spec:
+  containers:
+  - name: candy-app
+    image: erjaspal111/candy-store:v1
+    ports:
+    - containerPort: 3000
+

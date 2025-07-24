@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: candy-store
+  labels:
+    app: candy-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: candy-app
+  template:
+    metadata:
+      labels:
+        app: candy-app
+    spec:
+      containers:
+      - name: candy-web-app
+        image: erjaspal111/candy-store:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+
